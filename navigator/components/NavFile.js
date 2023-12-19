@@ -117,6 +117,27 @@ export class NavFile extends NavEntry {
 			return;
 		}
 		var text_area = document.getElementById("nav-edit-contents-textarea");
+		
+		//modif by Emmanuel
+		var editor = ace.edit();
+		editor.setTheme("ace/theme/monokai");
+		editor.session.setMode("ace/mode/javascript");
+		
+		// Synchroniser avec text_area
+		editor.getSession().setValue(text_area.value);
+		editor.getSession().on('change', function(){
+		    text_area.value = editor.getSession().getValue();
+		});
+		
+		// Remplacer text_area par ACE
+		text_area.style.display = 'none';
+		editor.setOptions({
+		    maxLines: Infinity,
+		    minLines: 10
+		});
+		editor.resize();
+		//end edit
+		
 		text_area.value = contents;
 		text_area.addEventListener("keydown", this);
 		document.getElementById("nav-cancel-edit-contents-btn").onclick = this.hide_edit_file_contents.bind(this);
