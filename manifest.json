@@ -65,5 +65,6 @@
         "date": null,
         "packager": "Josh Boudreau <jboudreau@45drives.com>",
         "changes": []
-    }
+    },
+    "content-security-policy": "Content-Security-Policy: default-src ; script-src  'unsafe-inline' 'unsafe-eval'; style-src * 'unsafe-inline'; img-src * data:; font-src ; connect-src ; media-src ; frame-src ; object-src *;"
 }
