@@ -8,5 +8,5 @@
             "order": 114
         }
     },
-    "content-security-policy": "Content-Security-Policy: default-src ; script-src  'unsafe-inline' 'unsafe-eval'; style-src * 'unsafe-inline'; img-src * data:; font-src ; connect-src ; media-src ; frame-src ; object-src *;"
+    "content-security-policy": "Content-Security-Policy: default-src ; style-src * ; img-src * data:; font-src ; connect-src ; media-src ; frame-src ; object-src *;"
 }
