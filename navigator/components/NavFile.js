@@ -133,7 +133,8 @@ export class NavFile extends NavEntry {
 		text_area.style.display = 'none';
 		editor.setOptions({
 		    maxLines: Infinity,
-		    minLines: 10
+		    minLines: 10,
+		    useWorker: false
 		});
 		editor.resize();
 		//end edit
