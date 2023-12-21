@@ -137,6 +137,7 @@ export class NavFile extends NavEntry {
 		    useWorker: false
 		});
 		editor.resize();
+		editor.getSession().setUseWorker(false);
 		//end edit
 		
 		text_area.value = contents;
